@@ -1,0 +1,12 @@
+{
+ "created_from": "scripts/extract_v2.py",
+ "method": "deterministic golden-replay through vendored tau2 environments; no LLM",
+ "retrieval_variant": "bm25_grep",
+ "compression_scale": 0.15,
+ "domains": {
+  "retail": 8,
+  "airline": 6,
+  "banking": 5,
+  "telecom": 5
+ }
+}

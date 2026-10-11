@@ -1,0 +1,119 @@
+[
+  {
+    "id": "tau2-retail-0",
+    "source_file": "data/tau2/domains/retail/tasks.json",
+    "task_id": "0",
+    "expected_hash": "a109be174767fde0ebb50fe3be37cdb2f1ce017fefd7bd29ea3e4d38bd3ac25a",
+    "n_reference_actions": 5,
+    "used_slow_tools": [
+      "exchange_delivered_order_items"
+    ],
+    "extracted_at": "2026-09-21T22:23:39.117332"
+  },
+  {
+    "id": "tau2-retail-1",
+    "source_file": "data/tau2/domains/retail/tasks.json",
+    "task_id": "1",
+    "expected_hash": "eab1dde2ca84a093a334a25db9258213e882d849bb487a966d69c056a67c2846",
+    "n_reference_actions": 5,
+    "used_slow_tools": [
+      "exchange_delivered_order_items"
+    ],
+    "extracted_at": "2026-09-21T22:23:39.213740"
+  },
+  {
+    "id": "tau2-retail-5",
+    "source_file": "data/tau2/domains/retail/tasks.json",
+    "task_id": "5",
+    "expected_hash": "9f1e45fc84a6995edead46216e4f7b07c27c4511524aedb38dc898ab9c52e866",
+    "n_reference_actions": 5,
+    "used_slow_tools": [
+      "return_delivered_order_items"
+    ],
+    "extracted_at": "2026-09-21T22:23:39.467714"
+  },
+  {
+    "id": "tau2-retail-6",
+    "source_file": "data/tau2/domains/retail/tasks.json",
+    "task_id": "6",
+    "expected_hash": "2053905d31cc52d9e2833383690e2a1853ea66cc0074b0e306699ad516950da7",
+    "n_reference_actions": 6,
+    "used_slow_tools": [
+      "exchange_delivered_order_items"
+    ],
+    "extracted_at": "2026-09-21T22:23:39.561900"
+  },
+  {
+    "id": "tau2-retail-7",
+    "source_file": "data/tau2/domains/retail/tasks.json",
+    "task_id": "7",
+    "expected_hash": "4759f292bd7623e928c516a8c5297bb10e9a4751f5b59011b4694f77a42624eb",
+    "n_reference_actions": 6,
+    "used_slow_tools": [
+      "exchange_delivered_order_items"
+    ],
+    "extracted_at": "2026-09-21T22:23:39.655608"
+  },
+  {
+    "id": "tau2-airline-7",
+    "source_file": "data/tau2/domains/airline/tasks.json",
+    "task_id": "7",
+    "expected_hash": "0087f8266f0f2fc2091ee4fabd9c137ed8b6c8751df09ec4f650756e4ae0ccf7",
+    "n_reference_actions": 5,
+    "used_slow_tools": [
+      "cancel_reservation",
+      "update_reservation_flights"
+    ],
+    "extracted_at": "2026-09-21T22:23:39.911822"
+  },
+  {
+    "id": "tau2-airline-17",
+    "source_file": "data/tau2/domains/airline/tasks.json",
+    "task_id": "17",
+    "expected_hash": "37ea6df3bdb75dc6be08b9fc19909ddef8e0a58c7d56afeaf20781acfba3b871",
+    "n_reference_actions": 3,
+    "used_slow_tools": [
+      "update_reservation_flights"
+    ],
+    "extracted_at": "2026-09-21T22:23:40.156557"
+  },
+  {
+    "id": "tau2-airline-18",
+    "source_file": "data/tau2/domains/airline/tasks.json",
+    "task_id": "18",
+    "expected_hash": "361a067372a4d57d23d10cfc560ba8d24cfd10862bb079be2c0e180459cefbbf",
+    "n_reference_actions": 5,
+    "used_slow_tools": [
+      "update_reservation_flights"
+    ],
+    "extracted_at": "2026-09-21T22:23:40.377379"
+  },
+  {
+    "id": "f3-control-0",
+    "source_file": "scripts/extract_vendor_lc1.py (self)",
+    "truth": 10.31135650737146,
+    "eps": 0.01,
+    "extracted_at": "2026-09-21T22:23:40.385720"
+  },
+  {
+    "id": "f3-control-1",
+    "source_file": "scripts/extract_vendor_lc1.py (self)",
+    "truth": 19.411824763557995,
+    "eps": 0.01,
+    "extracted_at": "2026-09-21T22:23:40.385791"
+  },
+  {
+    "id": "f3-control-2",
+    "source_file": "scripts/extract_vendor_lc1.py (self)",
+    "truth": 38.70953326525243,
+    "eps": 0.005,
+    "extracted_at": "2026-09-21T22:23:40.385837"
+  },
+  {
+    "id": "f3-control-3",
+    "source_file": "scripts/extract_vendor_lc1.py (self)",
+    "truth": 80.99094340065206,
+    "eps": 0.005,
+    "extracted_at": "2026-09-21T22:23:40.385882"
+  }
+]

@@ -1,0 +1,74 @@
+{
+ "tau2-retail-2": {
+  "get_order_details": 2.0
+ },
+ "tau2-retail-3": {
+  "get_order_details": 2.0
+ },
+ "tau2-retail-5": {
+  "get_order_details": 2.0
+ },
+ "tau2-retail-1": {
+  "get_product_details": 2.0
+ },
+ "tau2-airline-18": {
+  "update_reservation_flights": 5.0
+ },
+ "tau2-airline-39": {
+  "get_flight_status": 2.0
+ },
+ "tau2-banking-084": {
+  "get_debit_cards_by_account_id_7823": 2.0
+ },
+ "tau2-banking-086": {
+  "file_debit_card_transaction_dispute_6281": 5.0
+ },
+ "tau2-telecom-data-refuel": {
+  "run_speed_test": 8.0
+ },
+ "tau2-retail-30": {
+  "get_order_details": 2.0
+ },
+ "tau2-retail-32": {
+  "get_order_details": 2.0
+ },
+ "tau2-retail-23": {
+  "get_order_details": 2.0
+ },
+ "tau2-retail-28": {
+  "get_order_details": 2.0
+ },
+ "tau2-retail-20": {
+  "get_product_details": 2.0
+ },
+ "tau2-airline-44": {
+  "search_direct_flight": 2.0
+ },
+ "tau2-airline-42": {
+  "get_reservation_details": 2.0
+ },
+ "tau2-airline-41": {
+  "get_reservation_details": 2.0
+ },
+ "tau2-airline-23": {
+  "book_reservation": 12.0
+ },
+ "tau2-airline-12": {
+  "search_direct_flight": 2.0
+ },
+ "tau2-banking-081": {
+  "get_debit_cards_by_account_id_7823": 2.0
+ },
+ "tau2-banking-091": {
+  "get_bank_account_transactions_9173": 2.0
+ },
+ "tau2-banking-041": {
+  "file_credit_card_transaction_dispute_4829": 5.0
+ },
+ "tau2-banking-082": {
+  "file_debit_card_transaction_dispute_6281": 5.0
+ },
+ "tau2-banking-039": {
+  "file_credit_card_transaction_dispute_4829": 5.0
+ }
+}

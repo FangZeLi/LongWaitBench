@@ -1,0 +1,694 @@
+{
+  "manifest_version": "lc1.0",
+  "num_tasks": 12,
+  "instances": [
+    {
+      "id": "tau2-retail-0",
+      "source": "tau2-bench",
+      "domain": "retail",
+      "license": "MIT",
+      "task_spec": "Request: You received your order #W2378156 and wish to exchange the mechanical keyboard for the same one but with clicky switches and the smart thermostat for one compatible with Google Home instead of Apple HomeKit. If there is no keyboard that is clicky, RGB backlight, full size, you'd go for no backlight.\nKnown info: You are Yusuf Rossi in zip code 19122.\nUnknown info (agent must handle): You do not remember your email address.\nInstructions: You are detail-oriented and want to make sure everything is addressed in one go.",
+      "initial_state": {
+        "db_snapshot": "/data3/huangwenrui/wenrui_workdir/AutoResearchClaw/artifacts/vendor_lc1/dbs/retail_0_init.json",
+        "domain_env": "tau2.domains.retail.environment",
+        "db_class": "tau2.domains.retail.data_model.RetailDB"
+      },
+      "tools": [
+        {
+          "name": "exchange_delivered_order_items",
+          "slow": true,
+          "wait": {
+            "type": "policy",
+            "declared_minutes": 5
+          }
+        },
+        {
+          "surface": "full_domain",
+          "note": "expose the full domain tool surface; only the listed slow tools get wait policies"
+        }
+      ],
+      "wait_config": {
+        "mode": "per_tool",
+        "budget": {
+          "slow_calls": 8,
+          "wall_minutes": 60
+        }
+      },
+      "verifier": {
+        "checks": [
+          {
+            "kind": "db_hash_eq",
+            "expected_hash": "a109be174767fde0ebb50fe3be37cdb2f1ce017fefd7bd29ea3e4d38bd3ac25a",
+            "db_class": "tau2.domains.retail.data_model.RetailDB"
+          }
+        ]
+      },
+      "difficulty": {
+        "source_label": "tau2:retail:0",
+        "calibrated": false
+      }
+    },
+    {
+      "id": "tau2-retail-1",
+      "source": "tau2-bench",
+      "domain": "retail",
+      "license": "MIT",
+      "task_spec": "Request: You received your order #W2378156 and wish to exchange the mechanical keyboard for the same one but with clicky switches and the smart thermostat for one compatible with Google Home instead of Apple HomeKit. If there is no keyboard that is clicky, RGB backlight, full size, you'd rather only exchange the thermostat.\nKnown info: You are Yusuf Rossi in zip code 19122.\nUnknown info (agent must handle): You do not remember your email address\nInstructions: You are detail-oriented and want to make sure everything is addressed in one go.",
+      "initial_state": {
+        "db_snapshot": "/data3/huangwenrui/wenrui_workdir/AutoResearchClaw/artifacts/vendor_lc1/dbs/retail_1_init.json",
+        "domain_env": "tau2.domains.retail.environment",
+        "db_class": "tau2.domains.retail.data_model.RetailDB"
+      },
+      "tools": [
+        {
+          "name": "exchange_delivered_order_items",
+          "slow": true,
+          "wait": {
+            "type": "policy",
+            "declared_minutes": 5
+          }
+        },
+        {
+          "surface": "full_domain",
+          "note": "expose the full domain tool surface; only the listed slow tools get wait policies"
+        }
+      ],
+      "wait_config": {
+        "mode": "per_tool",
+        "budget": {
+          "slow_calls": 8,
+          "wall_minutes": 60
+        }
+      },
+      "verifier": {
+        "checks": [
+          {
+            "kind": "db_hash_eq",
+            "expected_hash": "eab1dde2ca84a093a334a25db9258213e882d849bb487a966d69c056a67c2846",
+            "db_class": "tau2.domains.retail.data_model.RetailDB"
+          }
+        ]
+      },
+      "difficulty": {
+        "source_label": "tau2:retail:1",
+        "calibrated": false
+      }
+    },
+    {
+      "id": "tau2-retail-5",
+      "source": "tau2-bench",
+      "domain": "retail",
+      "license": "MIT",
+      "task_spec": "Request: You want to exchange the water bottle and the desk lamp. You want to exchange the water bottle to a bigger one, and the desk lamp to a less bright one (prefer battery > USB > AC). If the agent asks for confirmation, only exchange the desk lamp. If the agent asks for confirmation again, do not exchange anything, and return the water bottle instead.\nKnown info: You are mei_kovacs_8020 in zipcode 28236.\nUnknown info (agent must handle): You do not remember your email address\nInstructions: .",
+      "initial_state": {
+        "db_snapshot": "/data3/huangwenrui/wenrui_workdir/AutoResearchClaw/artifacts/vendor_lc1/dbs/retail_5_init.json",
+        "domain_env": "tau2.domains.retail.environment",
+        "db_class": "tau2.domains.retail.data_model.RetailDB"
+      },
+      "tools": [
+        {
+          "name": "return_delivered_order_items",
+          "slow": true,
+          "wait": {
+            "type": "policy",
+            "declared_minutes": 5
+          }
+        },
+        {
+          "surface": "full_domain",
+          "note": "expose the full domain tool surface; only the listed slow tools get wait policies"
+        }
+      ],
+      "wait_config": {
+        "mode": "per_tool",
+        "budget": {
+          "slow_calls": 8,
+          "wall_minutes": 60
+        }
+      },
+      "verifier": {
+        "checks": [
+          {
+            "kind": "db_hash_eq",
+            "expected_hash": "9f1e45fc84a6995edead46216e4f7b07c27c4511524aedb38dc898ab9c52e866",
+            "db_class": "tau2.domains.retail.data_model.RetailDB"
+          }
+        ]
+      },
+      "difficulty": {
+        "source_label": "tau2:retail:5",
+        "calibrated": false
+      }
+    },
+    {
+      "id": "tau2-retail-6",
+      "source": "tau2-bench",
+      "domain": "retail",
+      "license": "MIT",
+      "task_spec": "Request: You want to exchange the water bottle and the desk lamp. You want to exchange the water bottle to a bigger one, and the desk lamp to a less bright one (prefer battery > USB > AC). If the agent asks for confirmation, only exchange the desk lamp.\nKnown info: You are mei_kovacs_8020 living in zipcode 28236.\nUnknown info (agent must handle): You do not remember your email address\nInstructions: .",
+      "initial_state": {
+        "db_snapshot": "/data3/huangwenrui/wenrui_workdir/AutoResearchClaw/artifacts/vendor_lc1/dbs/retail_6_init.json",
+        "domain_env": "tau2.domains.retail.environment",
+        "db_class": "tau2.domains.retail.data_model.RetailDB"
+      },
+      "tools": [
+        {
+          "name": "exchange_delivered_order_items",
+          "slow": true,
+          "wait": {
+            "type": "policy",
+            "declared_minutes": 5
+          }
+        },
+        {
+          "surface": "full_domain",
+          "note": "expose the full domain tool surface; only the listed slow tools get wait policies"
+        }
+      ],
+      "wait_config": {
+        "mode": "per_tool",
+        "budget": {
+          "slow_calls": 8,
+          "wall_minutes": 60
+        }
+      },
+      "verifier": {
+        "checks": [
+          {
+            "kind": "db_hash_eq",
+            "expected_hash": "2053905d31cc52d9e2833383690e2a1853ea66cc0074b0e306699ad516950da7",
+            "db_class": "tau2.domains.retail.data_model.RetailDB"
+          }
+        ]
+      },
+      "difficulty": {
+        "source_label": "tau2:retail:6",
+        "calibrated": false
+      }
+    },
+    {
+      "id": "tau2-retail-7",
+      "source": "tau2-bench",
+      "domain": "retail",
+      "license": "MIT",
+      "task_spec": "Request: You want to exchange the water bottle and the desk lamp. You want to exchange the water bottle to a bigger one, and the desk lamp to a less bright one (prefer AC adapter > battery > USB). If the agent asks for confirmation, only exchange the desk lamp.\nKnown info: You are mei_kovacs_8020 living in zipcode 28236.\nUnknown info (agent must handle): You do not remember your email address\nInstructions: .",
+      "initial_state": {
+        "db_snapshot": "/data3/huangwenrui/wenrui_workdir/AutoResearchClaw/artifacts/vendor_lc1/dbs/retail_7_init.json",
+        "domain_env": "tau2.domains.retail.environment",
+        "db_class": "tau2.domains.retail.data_model.RetailDB"
+      },
+      "tools": [
+        {
+          "name": "exchange_delivered_order_items",
+          "slow": true,
+          "wait": {
+            "type": "policy",
+            "declared_minutes": 5
+          }
+        },
+        {
+          "surface": "full_domain",
+          "note": "expose the full domain tool surface; only the listed slow tools get wait policies"
+        }
+      ],
+      "wait_config": {
+        "mode": "per_tool",
+        "budget": {
+          "slow_calls": 8,
+          "wall_minutes": 60
+        }
+      },
+      "verifier": {
+        "checks": [
+          {
+            "kind": "db_hash_eq",
+            "expected_hash": "4759f292bd7623e928c516a8c5297bb10e9a4751f5b59011b4694f77a42624eb",
+            "db_class": "tau2.domains.retail.data_model.RetailDB"
+          }
+        ]
+      },
+      "difficulty": {
+        "source_label": "tau2:retail:7",
+        "calibrated": false
+      }
+    },
+    {
+      "id": "tau2-airline-7",
+      "source": "tau2-bench",
+      "domain": "airline",
+      "license": "MIT",
+      "task_spec": "Request: You want to cancel your upcoming flights within reservation IDs XEHM4B and 59XX6W.\nKnown info: Your user id is 'daiki_muller_1116'.\nInstructions: If the agent says either of the two reservations is basic economy, ask to upgrade to business first and then cancel the reservation (Using the CC ending in 2135).\n\nYou are very persistent and terse but clear.\n\nYou are sick.\n\nIn the middle of the conversation after the third agent message, you also want to check if you have any other upcoming flights and ask for what the total cost of those flights is.",
+      "initial_state": {
+        "db_snapshot": "/data3/huangwenrui/wenrui_workdir/AutoResearchClaw/artifacts/vendor_lc1/dbs/airline_7_init.json",
+        "domain_env": "tau2.domains.airline.environment",
+        "db_class": "tau2.domains.airline.data_model.FlightDB"
+      },
+      "tools": [
+        {
+          "name": "cancel_reservation",
+          "slow": true,
+          "wait": {
+            "type": "policy",
+            "declared_minutes": 5
+          }
+        },
+        {
+          "name": "update_reservation_flights",
+          "slow": true,
+          "wait": {
+            "type": "policy",
+            "declared_minutes": 5
+          }
+        },
+        {
+          "surface": "full_domain",
+          "note": "expose the full domain tool surface; only the listed slow tools get wait policies"
+        }
+      ],
+      "wait_config": {
+        "mode": "per_tool",
+        "budget": {
+          "slow_calls": 8,
+          "wall_minutes": 60
+        }
+      },
+      "verifier": {
+        "checks": [
+          {
+            "kind": "db_hash_eq",
+            "expected_hash": "0087f8266f0f2fc2091ee4fabd9c137ed8b6c8751df09ec4f650756e4ae0ccf7",
+            "db_class": "tau2.domains.airline.data_model.FlightDB"
+          }
+        ]
+      },
+      "difficulty": {
+        "source_label": "tau2:airline:7",
+        "calibrated": false
+      }
+    },
+    {
+      "id": "tau2-airline-17",
+      "source": "tau2-bench",
+      "domain": "airline",
+      "license": "MIT",
+      "task_spec": "Request: For your upcoming trip from New York to Chicago, you want to:\n- add 3 checked bags\n- change the passenger to yourself\n- upgrade it to economy class. \n\nMention all three things at once and in this order.\nKnown info: Your name is Omar Rossi.\n\nYour user id is omar_rossi_1241.\nInstructions: You prefer gift card payment.\n\nYour birthday is in your user profile so you prefer not to provide it.",
+      "initial_state": {
+        "db_snapshot": "/data3/huangwenrui/wenrui_workdir/AutoResearchClaw/artifacts/vendor_lc1/dbs/airline_17_init.json",
+        "domain_env": "tau2.domains.airline.environment",
+        "db_class": "tau2.domains.airline.data_model.FlightDB"
+      },
+      "tools": [
+        {
+          "name": "update_reservation_flights",
+          "slow": true,
+          "wait": {
+            "type": "policy",
+            "declared_minutes": 5
+          }
+        },
+        {
+          "surface": "full_domain",
+          "note": "expose the full domain tool surface; only the listed slow tools get wait policies"
+        }
+      ],
+      "wait_config": {
+        "mode": "per_tool",
+        "budget": {
+          "slow_calls": 8,
+          "wall_minutes": 60
+        }
+      },
+      "verifier": {
+        "checks": [
+          {
+            "kind": "db_hash_eq",
+            "expected_hash": "37ea6df3bdb75dc6be08b9fc19909ddef8e0a58c7d56afeaf20781acfba3b871",
+            "db_class": "tau2.domains.airline.data_model.FlightDB"
+          }
+        ]
+      },
+      "difficulty": {
+        "source_label": "tau2:airline:17",
+        "calibrated": false
+      }
+    },
+    {
+      "id": "tau2-airline-18",
+      "source": "tau2-bench",
+      "domain": "airline",
+      "license": "MIT",
+      "task_spec": "Request: You just faced some money issue and want to downgrade all business flights to economy, without changing the flights or passengers.\nKnown info: Your name is Omar Davis.\n\nYour user id is omar_davis_3817.\nUnknown info (agent must handle): You don't remember the payment method you used.\nInstructions: You are fine with refunding to original payment for each reservation.\n\nYou want to know how much money you have saved in total, but you are fine having that information after the refunds are processed.\n\nYou are emotional and a bit angry, but you are willing to cooperate with the agent.",
+      "initial_state": {
+        "db_snapshot": "/data3/huangwenrui/wenrui_workdir/AutoResearchClaw/artifacts/vendor_lc1/dbs/airline_18_init.json",
+        "domain_env": "tau2.domains.airline.environment",
+        "db_class": "tau2.domains.airline.data_model.FlightDB"
+      },
+      "tools": [
+        {
+          "name": "update_reservation_flights",
+          "slow": true,
+          "wait": {
+            "type": "policy",
+            "declared_minutes": 5
+          }
+        },
+        {
+          "surface": "full_domain",
+          "note": "expose the full domain tool surface; only the listed slow tools get wait policies"
+        }
+      ],
+      "wait_config": {
+        "mode": "per_tool",
+        "budget": {
+          "slow_calls": 8,
+          "wall_minutes": 60
+        }
+      },
+      "verifier": {
+        "checks": [
+          {
+            "kind": "db_hash_eq",
+            "expected_hash": "361a067372a4d57d23d10cfc560ba8d24cfd10862bb079be2c0e180459cefbbf",
+            "db_class": "tau2.domains.airline.data_model.FlightDB"
+          }
+        ]
+      },
+      "difficulty": {
+        "source_label": "tau2:airline:18",
+        "calibrated": false
+      }
+    },
+    {
+      "id": "f3-control-0",
+      "source": "control-f3",
+      "domain": "f3",
+      "license": "self",
+      "task_spec": "Estimate E[f(X)] where X is a standard normal vector in R^8 and f is a fixed private function defined by the environment. Report the estimate with absolute error <= 0.01. You may submit estimation jobs (each job draws n_samples <= 1000000 and returns the sample estimate plus its real compute time). Budget: at most 6 jobs.",
+      "initial_state": {
+        "params": {
+          "dim": 8,
+          "weights": [
+            1.5797707152765619,
+            1.034941984528805,
+            1.7931681888066895,
+            0.6033871668731844,
+            1.0963123877416587,
+            0.8206928643046176,
+            1.4099151374513388,
+            1.9731680623886048
+          ],
+          "weights_sha256": "587492710ebdea4e97637b763283e06a15162712017b60f5e6899472a3c23c81"
+        }
+      },
+      "tools": [
+        {
+          "name": "submit_job",
+          "slow": true,
+          "wait": {
+            "type": "compute"
+          },
+          "params_schema": {
+            "method": "mc_mean",
+            "n_samples": "int <= n_max"
+          }
+        }
+      ],
+      "wait_config": {
+        "mode": "compute",
+        "budget": {
+          "slow_calls": 6,
+          "wall_minutes": 30
+        }
+      },
+      "verifier": {
+        "checks": [
+          {
+            "kind": "tolerance",
+            "true_value": 10.31135650737146,
+            "eps": 0.01
+          }
+        ]
+      },
+      "difficulty": {
+        "source_label": "control-f3",
+        "calibrated": false
+      }
+    },
+    {
+      "id": "f3-control-1",
+      "source": "control-f3",
+      "domain": "f3",
+      "license": "self",
+      "task_spec": "Estimate E[f(X)] where X is a standard normal vector in R^16 and f is a fixed private function defined by the environment. Report the estimate with absolute error <= 0.01. You may submit estimation jobs (each job draws n_samples <= 1000000 and returns the sample estimate plus its real compute time). Budget: at most 6 jobs.",
+      "initial_state": {
+        "params": {
+          "dim": 16,
+          "weights": [
+            0.8770907834750862,
+            1.4175993554201622,
+            1.4271350639709786,
+            0.5620053230550213,
+            1.0549325002142829,
+            1.8268449504550106,
+            1.4811736146490067,
+            0.5094412945204198,
+            1.0388851593927977,
+            0.5023151538550858,
+            1.7914952935935693,
+            0.5054639038567486,
+            1.7828705387546655,
+            1.0833674470280625,
+            1.9801607282678562,
+            1.5710436530492384
+          ],
+          "weights_sha256": "caf9b8b890fe0e0ce2a4c30c940b04e14d108ee07d8b39b339b9a762796b60f0"
+        }
+      },
+      "tools": [
+        {
+          "name": "submit_job",
+          "slow": true,
+          "wait": {
+            "type": "compute"
+          },
+          "params_schema": {
+            "method": "mc_mean",
+            "n_samples": "int <= n_max"
+          }
+        }
+      ],
+      "wait_config": {
+        "mode": "compute",
+        "budget": {
+          "slow_calls": 6,
+          "wall_minutes": 30
+        }
+      },
+      "verifier": {
+        "checks": [
+          {
+            "kind": "tolerance",
+            "true_value": 19.411824763557995,
+            "eps": 0.01
+          }
+        ]
+      },
+      "difficulty": {
+        "source_label": "control-f3",
+        "calibrated": false
+      }
+    },
+    {
+      "id": "f3-control-2",
+      "source": "control-f3",
+      "domain": "f3",
+      "license": "self",
+      "task_spec": "Estimate E[f(X)] where X is a standard normal vector in R^32 and f is a fixed private function defined by the environment. Report the estimate with absolute error <= 0.005. You may submit estimation jobs (each job draws n_samples <= 2000000 and returns the sample estimate plus its real compute time). Budget: at most 8 jobs.",
+      "initial_state": {
+        "params": {
+          "dim": 32,
+          "weights": [
+            0.8998435953162198,
+            1.1340399134927959,
+            0.8846531432333575,
+            0.6484598902906215,
+            1.7410003347605063,
+            1.4983219162952994,
+            1.6624121366824394,
+            1.6925988027543526,
+            1.7025692200004696,
+            1.226565707440222,
+            1.2279517766189034,
+            0.5005306419865074,
+            1.71330246220066,
+            1.3376780023302361,
+            1.60388757539113,
+            0.6512041943525289,
+            0.8250904081749855,
+            1.1741101465307588,
+            0.778201351763717,
+            1.1689638115016612,
+            1.61723094737096,
+            1.8358389977235374,
+            1.9526126282368752,
+            0.5624756499329047,
+            0.8396380232510793,
+            0.8278672526955377,
+            1.5892959008250431,
+            0.9231830703456186,
+            0.601052409945819,
+            0.9950505592910299,
+            1.1067233424870353,
+            1.7871794520296165
+          ],
+          "weights_sha256": "4ea57bfd19ca30f67c62187f21620001775ba95a55781425367a63b74bd1a57f"
+        }
+      },
+      "tools": [
+        {
+          "name": "submit_job",
+          "slow": true,
+          "wait": {
+            "type": "compute"
+          },
+          "params_schema": {
+            "method": "mc_mean",
+            "n_samples": "int <= n_max"
+          }
+        }
+      ],
+      "wait_config": {
+        "mode": "compute",
+        "budget": {
+          "slow_calls": 8,
+          "wall_minutes": 45
+        }
+      },
+      "verifier": {
+        "checks": [
+          {
+            "kind": "tolerance",
+            "true_value": 38.70953326525243,
+            "eps": 0.005
+          }
+        ]
+      },
+      "difficulty": {
+        "source_label": "control-f3",
+        "calibrated": false
+      }
+    },
+    {
+      "id": "f3-control-3",
+      "source": "control-f3",
+      "domain": "f3",
+      "license": "self",
+      "task_spec": "Estimate E[f(X)] where X is a standard normal vector in R^64 and f is a fixed private function defined by the environment. Report the estimate with absolute error <= 0.005. You may submit estimation jobs (each job draws n_samples <= 3000000 and returns the sample estimate plus its real compute time). Budget: at most 10 jobs.",
+      "initial_state": {
+        "params": {
+          "dim": 64,
+          "weights": [
+            1.54684323214032,
+            0.5538859272775187,
+            1.451305382819567,
+            0.805308720604879,
+            1.3694417768687872,
+            1.6749589917199796,
+            0.7929290040533814,
+            0.7505649265596777,
+            1.9503566414187712,
+            1.5533001460402278,
+            0.9951773222825848,
+            0.9402398281940112,
+            1.9812696428864536,
+            0.5444688963130188,
+            1.183859057696444,
+            1.3390268357402726,
+            1.1516591706982633,
+            1.8469282891207692,
+            0.6184419117628193,
+            1.248033722687043,
+            1.8299677209520533,
+            0.6439456680431155,
+            1.443778503487063,
+            1.4977637431619213,
+            0.6977824403808788,
+            1.484239402941588,
+            1.8610283549976017,
+            1.247213215208447,
+            1.5753630030509094,
+            1.936540169601412,
+            1.80022802630079,
+            0.9582958405668527,
+            1.307819643459641,
+            1.9832025674927234,
+            1.979324500403881,
+            0.95871577893469,
+            1.024360523080085,
+            1.8059155896898877,
+            0.7274052109771427,
+            1.1317333818061397,
+            0.7219209631084815,
+            1.3480982676262538,
+            1.4742203750978617,
+            1.414764246067432,
+            1.6417844511595778,
+            1.1046504106268764,
+            1.6590680730981664,
+            1.3075723373595052,
+            0.5458978997642292,
+            0.787677795254339,
+            1.795648004874308,
+            0.7986859038242737,
+            0.5292697480735372,
+            0.5038074618157111,
+            1.84142975097959,
+            0.7243438431538423,
+            1.6025989871613584,
+            1.8724969272983893,
+            1.1213404941034821,
+            1.690602479727585,
+            0.6756529488676131,
+            1.9435722325468374,
+            0.5099629287623457,
+            1.1832541588788488
+          ],
+          "weights_sha256": "52b0e68cf781e9c56376e0f446015b0ab77f2e529043ad729a28d5e5f99ccd78"
+        }
+      },
+      "tools": [
+        {
+          "name": "submit_job",
+          "slow": true,
+          "wait": {
+            "type": "compute"
+          },
+          "params_schema": {
+            "method": "mc_mean",
+            "n_samples": "int <= n_max"
+          }
+        }
+      ],
+      "wait_config": {
+        "mode": "compute",
+        "budget": {
+          "slow_calls": 10,
+          "wall_minutes": 60
+        }
+      },
+      "verifier": {
+        "checks": [
+          {
+            "kind": "tolerance",
+            "true_value": 80.99094340065206,
+            "eps": 0.005
+          }
+        ]
+      },
+      "difficulty": {
+        "source_label": "control-f3",
+        "calibrated": false
+      }
+    }
+  ]
+}

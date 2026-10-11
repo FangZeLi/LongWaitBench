@@ -8,14 +8,22 @@
 .dsh-home/
 .opencode-ref/
 
-# ---- benchmark data, results, design docs (not part of the code release) ----
-data/
+# ---- results & design docs (kept local only) ----
 results/
 analysis/
 
-# ---- local full docs (design decisions & results, kept local only) ----
+# ---- local full docs ----
 README_FULL.md
 INTRO.md
+
+# ---- third-party deps & upstream scaffolding (not task content) ----
+data/pylibs/
+data/tau2bench/*
+!data/tau2bench/data/
+data/tau2bench/.git/
+
+# ---- rejected artifacts ----
+data/new_f3_v4.json
 
 # ---- python ----
 __pycache__/
@@ -24,3 +32,7 @@ __pycache__/
 # ---- misc ----
 *.log
 .DS_Store
+# ---- 不发布：DB 快照与 RE-Bench（用户指定） ----
+data/dbs/
+data/dbs_v2/
+data/rebench/

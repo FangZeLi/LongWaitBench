@@ -1,0 +1,26 @@
+# ---- secrets ----
+.env
+*.env
+*.key
+*.pem
+
+# ---- runtime state / harness homes ----
+.dsh-home/
+.opencode-ref/
+
+# ---- benchmark data, results, design docs (not part of the code release) ----
+data/
+results/
+analysis/
+
+# ---- local full docs (design decisions & results, kept local only) ----
+README_FULL.md
+INTRO.md
+
+# ---- python ----
+__pycache__/
+*.pyc
+
+# ---- misc ----
+*.log
+.DS_Store
